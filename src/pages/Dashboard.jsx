@@ -16,11 +16,30 @@ const Dashboard = () => {
     return null;
   }
   return (
-    <div>
-      <h1>Dashboard</h1>
-      {!!user && <h2>Hi {user.name}!</h2>}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        // alignItems: "center",
+
+        backgroundColor: "#121212",
+        minHeight: "100vh",
+      }}
+    >
+      {!!user && (
+        <h2
+          style={{
+            color: "white",
+            textAlign: "center",
+            padding: "20px",
+          }}
+        >
+          Hi {user.name}!
+        </h2>
+      )}
       <div className="playlist">
         <iframe
+          style={{ aspectRatio: "16/9", width: "100%" }}
           className="iframe"
           src="https://www.youtube.com/embed/videoseries?list=PLC88cLhd1Qkmt3quxO8COJzyKW7ZRMQa8"
           title="YouTube video player"

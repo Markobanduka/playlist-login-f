@@ -8,8 +8,10 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "../context/userContext";
 import Dashboard from "./pages/Dashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 axios.defaults.baseURL = "https://playlist-login.onrender.com";
+
 axios.defaults.withCredentials = true;
 
 function App() {
